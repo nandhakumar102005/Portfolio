@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project</title>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+            font-family: 'Times New Roman', Times, serif;
+        }
+
+        body {
+            background-color: #f4f4f4; /* Optional: adds contrast to black cards */
+            padding: 20px 0;
+        }
+
+        /* --- PROJECT 1 STYLE --- */
+        .project1 {
+            margin: 50px auto;
+            min-height: 800px; /* Changed height to min-height for content expansion */
+            width: 90%; /* Responsive width */
+            max-width: 1200px; /* Keeps your original desktop size */
+            border-radius: 20px;
+            background-color: black;
+            color: white;
+            box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.5);
+            transition: transform 0.7s ease;
+            padding-bottom: 40px;
+        }
+
+        .project1:hover {
+            transform: scale(1.02); /* Reduced slightly for better mobile UX */
+            cursor: pointer;
+        }
+
+        .project1 h1 {
+            text-align: center;
+            transition: transform 0.5s ease;
+            padding: 0 20px;
+        }
+
+        .project1 h1:hover {
+            transform: scale(1.05);
+        }
+
+        .icon {
+            display: block;
+            margin: 40px auto 20px auto; /* Centered icon for all screens */
+                  
+        }
+
+
+        .project1 p {
+            margin-top: 20px;
+            text-align: center;
+            padding: 0 40px; /* More padding for readability */
+            word-spacing: 3px;
+            line-height: 1.6;
+        }
+
+        .project1 h3 {
+            margin-top: 30px;
+            text-align: center;
+        }
+
+        .screenshots {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 10px;
+            flex-wrap: wrap;
+        }
+
+        .img {
+            padding: 15px;
+            text-align: center;
+            transition: transform 0.7s ease;
+        }
+
+        .img img {
+            border-radius: 10px;
+            max-width: 100%; /* Important for small screens */
+        }
+
+        .img:hover {
+            transform: scale(1.07);
+            cursor: pointer;
+        }
+
+        /* --- PROJECT 2 STYLE --- */
+        .project2 {
+            margin: 50px auto;
+            min-height: 500px;
+            width: 90%;
+            max-width: 1200px;
+            border-radius: 20px;
+            background-color: black;
+            color: white;
+            box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.5);
+            transition: transform 0.7s ease;
+            margin-bottom: 30px;
+            padding-bottom: 40px;
+        }
+
+        .project2:hover {
+            transform: scale(1.02);
+            cursor: pointer;
+        }
+
+        .project2 h1 {
+            text-align: center;
+            transition: transform 0.5s ease;
+            padding: 0 20px;
+        }
+         .project2 h1:hover {
+            transform: scale(1.05);
+        }
+
+
+        .icon1 {
+            display: block;
+            margin: 40px auto 20px auto;
+        }
+
+        .project2 p {
+            margin-top: 20px;
+            text-align: center;
+            padding: 0 40px;
+            word-spacing: 3px;
+            line-height: 1.6;
+        }
+
+        .project2 h3 {
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        /* --- MEDIA QUERIES (THE RESPONSIVE MAGIC) --- */
+
+        /* Tablets and IPads (Below 1024px) */
+        @media (max-width: 1024px) {
+            .project1, .project2 {
+                width: 95%;
+            }
+            .img img {
+                width: 220px;
+                height: auto;
+            }
+        }
+
+        /* Mobile Phones (Below 768px) */
+        @media (max-width: 768px) {
+            .project1 p, .project2 p {
+                padding: 0 20px;
+                font-size: 0.95rem;
+            }
+            
+            .project1 h1, .project2 h1 {
+                font-size: 1.5rem;
+            }
+
+            .img img {
+                width: 100%; /* Images take full width on small mobile */
+                height: auto;
+                max-width: 280px;
+            }
+
+            /* Adjusting the hover effect for mobile touch */
+            .project1:hover, .project2:hover {
+                transform: none; 
+            }
+        }
+
+        /* Small Phones (Below 480px) */
+        @media (max-width: 480px) {
+            .project1, .project2 {
+                margin-top: 20px;
+                border-radius: 15px;
+            }
+            .icon, .icon1 {
+                width: 50px;
+                height: auto;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="projectContainer">
+        <div class="project1">
+            <img src="project.png" height="50px" width="70px" class="icon">
+            <h1>Food Wastage Management System</h1>
+            <p>Developed a comprehensive full-stack web application designed to minimize urban food waste by connecting donors with NGOs in real-time. The frontend is built using <b>HTML5, CSS3,</b> and <b>JavaScript</b> to provide a clean, responsive, and user-friendly interface for seamless navigation. On the backend, <b>Java</b> and <b>MySQL</b> ensure robust data processing and secure storage, managed through <b>Maven</b> and deployed via <b>Apache Tomcat</b>. The system features an automated donation workflow, location-based mapping, and a centralized dashboard for efficient resource tracking. This project demonstrates expertise in bridging social impact with scalable technology to ensure surplus food reaches the needy promptly.</p>
+
+            <h3>Project Screenshots</h3>
+            <div class="screenshots">
+                <div class="img">
+                    <img src="Screenshot 2026-03-07 200051.png" height="180px" width="250px">
+                    <p>Home Interface</p>
+                </div>
+                <div class="img">
+                    <img src="Screenshot 2026-03-07 200124.png" height="180px" width="250px">
+                    <p>Register page</p>
+                </div>
+                <div class="img">
+                    <img src="Screenshot 2026-03-07 200202.png" height="180px" width="250px">
+                    <p>Login page</p>
+                </div>
+                <div class="img">
+                    <img src="Screenshot 2026-03-07 200317.png" height="180px" width="250px">
+                    <p>Donor's Dashboard</p>
+                </div>
+                <div class="img">
+                    <img src="Screenshot 2026-03-07 200449.png" height="180px" width="250px">
+                    <p>New Food Donation Panel</p>
+                </div>
+                <div class="img">
+                    <img src="Screenshot 2026-03-07 200617.png" height="180px" width="250px">
+                    <p>NGO's Dashboard</p>
+                </div>
+                <div class="img">
+                    <img src="Screenshot 2026-03-07 200805.png" height="180px" width="250px">
+                    <p>Admin Dashboard</p>
+                </div>
+                <div class="img">
+                    <img src="Screenshot 2026-03-07 203604.png" height="180px" width="250px">
+                    <p>Project Database</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="projectcontainer2">
+        <div class="project2">
+            <img src="project.png" height="50px" width="70px" class="icon1">
+            <h1>Trendy Chaps</h1>
+            <p>Trendy Chaps is a modern e-commerce web application developed using <b>HTML, CSS, </b>and <b> JavaScript.</b> The project focuses on providing a seamless and user-friendly shopping experience with an attractive interface. Implemented responsive design principles to ensure the platform works perfectly across all device sizes. Designed with a focus on clean aesthetics and professional layouts to showcase products effectively. Demonstrates strong foundational skills in Frontend Development and UI/UX design.</p>
+
+            <h3>Project Screenshots</h3>
+            <div class="screenshots">
+                <div class="img">
+                    <img src="Screenshot 2026-05-20 125342.png" height="180" width="250">
+                    <p>Register page</p>
+                </div>
+                <div class="img">
+                    <img src="Screenshot 2026-05-20 125412.png" height="180" width="250">
+                    <p>Login page</p>
+                </div>
+                <div class="img">
+                    <img src="Screenshot 2026-05-20 125522.png" height="180" width="250">
+                    <p>Home Interface</p>
+                </div>
+                <div class="img">
+                    <img src="Screenshot 2026-05-20 125820.png" height="180" width="250">
+                    <p>Products Section</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

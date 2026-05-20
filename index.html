@@ -1,0 +1,448 @@
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Times New Roman', Times, serif;
+    }
+
+    body {
+        background-color: white;
+        min-height: 100vh;
+        overflow-x: hidden;
+    }
+
+    /* Navbar Styling */
+    .nav-container {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px 60px;
+        background-color: white;
+        position: fixed;
+    }
+
+    .navbar h1 {
+        font-size: 24px;
+        color: black;
+    }
+
+    .menulist {
+        display: flex;
+        list-style: none;
+    }
+
+    .menulist li {
+        padding: 0 20px;
+        transition: transform 0.5s ease;
+    }
+
+    .menulist li:hover {
+        transform: scale(1.2);
+    }
+
+    .menulist a {
+        text-decoration: none;
+        color: black;
+        position: relative;
+        font-weight: bold;
+    }
+
+    .menulist a::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: -6px;
+        width: 100%;
+        height: 3px;
+        background: black;
+        transform: scaleX(0);
+        transition: transform .5s;
+        transform-origin: right;
+    }
+
+    .menulist a:hover::after {
+        transform: scaleX(1);
+        transform-origin: left;
+    }
+
+    /* Main Hero Section */
+    .hero-section {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 50px 80px;
+        flex-wrap: wrap; 
+       
+    }
+
+    .content {
+        flex: 1;
+        min-width: 300px;
+        margin-top: 70px;
+    }
+
+    .content h1 {
+        font-size: 60px;
+        color: black;
+       
+    }
+    .span{
+        display:flex;
+        flex-direction: column;
+        font-size: 55px;
+    }
+
+
+    .content h3 {
+        font-size: 25px;
+        margin-top: 7px;
+        color: black;
+    }
+
+    .content p {
+        font-size: 16px;
+        color: black;
+        line-height: 1.6;
+        margin-bottom: 30px;
+        max-width: 600px;
+    }
+
+    /* Image Box */
+    .photobox2 {
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        min-width: 300px;
+        margin-top: 50px;
+    }
+
+    .photobox2 img {
+        border-radius: 5%;
+        box-shadow: 5px 5px 5px 5px rgba(0,0,0,0.1);
+        transition: transform 0.5s ease;
+        object-fit: cover;
+    }
+
+    .photobox2 img:hover {
+        transform: scale(1.1);
+    }
+
+    /* Button Styling */
+    .btn {
+        padding: 12px 25px;
+        background-color: white;
+        color: black;
+        font-weight: 700;
+        box-shadow: 3px 3px 3px 3px rgba(0,0,0,0.2);
+        border-radius: 5px;
+        border: 1px solid black;
+        text-decoration: none;
+        display: inline-block;
+        transition: all 0.5s ease;
+    }
+
+    .btn:hover {
+        transform: scale(1.1);
+        background-color: black;
+        color: white;
+        cursor: pointer;
+    }
+
+    /* Tablet/Mobile View */
+    @media (max-width: 768px) {
+        .nav-container {
+            padding: 20px;
+            flex-direction: column;
+        }
+        
+        .navbar h1 {
+            margin-bottom: 15px;
+        }
+
+        .hero-section {
+            padding: 20px;
+            flex-direction: column-reverse;  
+            text-align: center;
+        }
+
+        .content h1 {
+            font-size: 32px;
+            margin-top: 20px;
+        }
+
+       
+
+        .content p {
+            margin: 0 auto 20px auto;
+        }
+
+        .photobox2 {
+            margin-bottom: 20px;
+        }
+
+        .photobox2 img {
+            width: 200px;
+            height: auto;
+        }
+        
+        .menulist li {
+            padding: 0 10px;
+        }
+    }
+
+
+
+
+
+
+
+
+
+
+ * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Times New Roman', Times, serif;
+    }
+
+    body {
+            
+        min-height: 100vh;
+        padding-bottom: 50px;
+        overflow-x: hidden;
+    }
+
+    .intro {
+        text-align: center;
+        padding: 40px 20px;
+    }
+
+    .name {
+        font-size: clamp(24px, 5vw, 40px); 
+        font-weight: 700;
+        margin-bottom: 10px;
+    }
+
+    .intro h2 {
+        font-weight: 900;
+        color: #333;
+    }
+
+    /* Layout Wrapper */
+    .about-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 40px;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 20px;
+    }
+
+  
+    .skill, .education {
+        flex: 1;
+        min-width: 320px;
+        max-width: 500px;
+        height: auto; 
+        min-height: 320px;
+        background-color: black;
+        color: white;
+        padding: 30px;
+        box-shadow: 10px 10px 20px rgba(0,0,0,0.5);
+        border-radius: 8px;
+        transition: transform 0.7s ease;
+        position: relative;
+        text-align: center;
+    }
+
+    .skill:hover, .education:hover, .project:hover {
+        transform: scale(1.05);
+        cursor: pointer;
+    }
+
+    /* Icon Styling */
+    .skillimg, .eduimg, .projectimg {
+        display: block;
+        margin: 0 auto 15px auto;
+        filter: invert(1); 
+    }
+
+    .skill h1, .education h1, .project h1 {
+        margin-bottom: 20px;
+        transition: transform 0.7s ease;
+    }
+
+    .skill h1:hover, .education h1:hover, .project h1:hover {
+        transform: scale(1.1);
+    }
+
+    .skill h2 {
+        font-size: 18px;
+        margin-top: 12px;
+        text-align: left;
+    }
+
+    .skill span {
+        font-weight: normal;
+        color: #ccc;
+    }
+
+    .education h2 {
+        font-size: 18px;
+        margin-top: 15px;
+    }
+
+    .education p {
+        color: #ccc;
+        margin-bottom: 10px;
+    }
+
+    /* Project Section - Full Width */
+    .project-wrapper {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        padding: 20px;
+    }
+
+    .project {
+        width: 100%;
+        max-width: 1040px;
+        background-color: black;
+        color: white;
+        padding: 40px;
+        box-shadow: 10px 10px 20px rgba(0,0,0,0.5);
+        border-radius: 8px;
+        transition: transform 0.7s ease;
+        text-align: center;
+    }
+
+    .project h2 {
+        color: #4da6ff; /* Added subtle color for project titles */
+        margin-top: 25px;
+        font-size: 20px;
+    }
+
+    .project p {
+        margin-top: 10px;
+        line-height: 1.6;
+        text-align: left;
+        max-width: 900px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    /* Mobile Adjustments */
+    @media (max-width: 768px) {
+        .about-container {
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        .skill, .education, .project {
+            width: 100%;
+            padding: 20px;
+        }
+
+        .skill h2 {
+            font-size: 16px;
+        }
+    }
+
+
+
+
+
+</style>
+
+<body>
+    <div class="nav-container">
+        <div class="navbar">
+            <h1>Portfolio</h1>
+        </div>
+        <ul class="menulist">
+            <li><a href="#">HOME</a></li>
+            <li><a href="about.html">ABOUT</a></li>
+             <li><a href="project.html">PROJECTS</a></li>
+            <li><a href="contact.html">CONTACT</a></li>
+        </ul>
+    </div>
+
+    <div class="hero-section">
+        <div class="content">
+            <h1>Hi, I'm <span class="span">Nandha kumar B</span></h1>
+            <h3>Full Stack Web Developer</h3><br>
+            <p>
+                I am a recently graduated <b>Full stack Developer with a BCA Degree</b>, specializing in building modern web applications.<br><br>
+                With strong expertise in <b>Frontend technologies</b> and a solid grasp of <b>Java</b>, I focus on creating responsive and user-centric digital solutions.
+            </p>
+            <a href="about.html" class="btn">More About Me</a>
+        </div>
+
+        <div class="photobox2">
+            <img src="profile 2.jpeg" height="450px" width="280px" alt="Profile Image">
+        </div>
+    </div><br><br><br><br>
+
+
+
+
+
+
+
+
+    <div class="intro">
+        <h1 class="name">
+            <marquee scrollamount="10">Hi, I'm Nandha kumar B</marquee>
+        </h1>
+        <h2>Full Stack Web Developer</h2>
+    </div>
+
+    <div class="about-container">
+        <!-- Technical Skills -->
+        <div class="skill">
+            <img src="skill.png" height="40" width="40" class="skillimg" alt="skills">
+            <h1>Technical Skills</h1>
+            <h2>Front-End: <span>HTML, CSS, JavaScript</span></h2>
+            <h2>Frameworks: <span>React js</span></h2>
+            <h2>Languages: <span>Java</span></h2>
+            <h2>Database: <span>MySQL</span></h2>
+        </div>
+
+        <!-- Education -->
+        <div class="education">
+            <img src="mortarboard.png" width="40" height="40" class="eduimg" alt="edu">
+            <h1>Education</h1>
+            <h2>Bachelor of Computer Applications</h2>
+            <p>Thiruthangal Nadar College (2023 - 2026)</p>
+            <hr style="border: 0.5px solid #444; margin: 10px 0;">
+            <h2>Higher Secondary Certificate</h2>
+            <p>Pak Palanisamy Hr Sec School</p>
+        </div>
+    </div>
+
+    <!-- Projects Section -->
+    <div class="project-wrapper">
+        <div class="project">
+            <img src="project-management.png" height="40" width="40" class="projectimg" alt="projects">
+            <h1>Key Projects</h1>
+            
+            <h2>Food Wastage Management System</h2>
+            <p>
+                • Developed a web-based application to bridge the gap between food donors (Restaurants/Hotels) and NGOs.<br>
+                • Implemented MySQL database to manage user profiles, food listings, and donation tracking.<br>
+                • Managed backend logic with Java and Maven for a scalable project structure.
+            </p>
+
+            <h2>Trendy Chaps (E-Commerce)</h2>
+            <p>
+                • Designed and developed a responsive e-commerce storefront for apparel.<br>
+                • Focused on high-quality UI/UX and seamless navigation for a modern shopping experience.
+            </p>
+        </div>
+    </div>
+</body>

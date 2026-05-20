@@ -1,0 +1,207 @@
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Times New Roman', Times, serif;
+    }
+
+    body {
+            /* Adjusted gradient for a smoother professional look */
+            /* background: linear-gradient(to bottom, #ffffff, #808080, #000000); */
+        min-height: 100vh;
+        padding-bottom: 50px;
+        overflow-x: hidden;
+    }
+
+    .intro {
+        text-align: center;
+        padding: 40px 20px;
+    }
+
+    .name {
+        font-size: clamp(24px, 5vw, 40px); /* Responsive font size */
+        font-weight: 700;
+        margin-bottom: 10px;
+    }
+
+    .intro h2 {
+        font-weight: 900;
+        color: #333;
+    }
+
+    /* Layout Wrapper */
+    .about-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 40px;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 20px;
+    }
+
+    /* Base Card Styling (Skills & Education) */
+    .skill, .education {
+        flex: 1;
+        min-width: 320px;
+        max-width: 500px;
+        height: auto; /* Changed to auto to fit content on small screens */
+        min-height: 320px;
+        background-color: black;
+        color: white;
+        padding: 30px;
+        box-shadow: 10px 10px 20px rgba(0,0,0,0.5);
+        border-radius: 8px;
+        transition: transform 0.7s ease;
+        position: relative;
+        text-align: center;
+    }
+
+    .skill:hover, .education:hover, .project:hover {
+        transform: scale(1.05);
+        cursor: pointer;
+    }
+
+    /* Icon Styling */
+    .skillimg, .eduimg, .projectimg {
+        display: block;
+        margin: 0 auto 15px auto;
+        filter: invert(1); /* Makes icons white if they were black */
+    }
+
+    .skill h1, .education h1, .project h1 {
+        margin-bottom: 20px;
+        transition: transform 0.7s ease;
+    }
+
+    .skill h1:hover, .education h1:hover, .project h1:hover {
+        transform: scale(1.1);
+    }
+
+    .skill h2 {
+        font-size: 18px;
+        margin-top: 12px;
+        text-align: left;
+    }
+
+    .skill span {
+        font-weight: normal;
+        color: #ccc;
+    }
+
+    .education h2 {
+        font-size: 18px;
+        margin-top: 15px;
+    }
+
+    .education p {
+        color: #ccc;
+        margin-bottom: 10px;
+    }
+
+    /* Project Section - Full Width */
+    .project-wrapper {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        padding: 20px;
+    }
+
+    .project {
+        width: 100%;
+        max-width: 1040px;
+        background-color: black;
+        color: white;
+        padding: 40px;
+        box-shadow: 10px 10px 20px rgba(0,0,0,0.5);
+        border-radius: 8px;
+        transition: transform 0.7s ease;
+        text-align: center;
+    }
+
+    .project h2 {
+        color: #4da6ff; /* Added subtle color for project titles */
+        margin-top: 25px;
+        font-size: 20px;
+    }
+
+    .project p {
+        margin-top: 10px;
+        line-height: 1.6;
+        text-align: left;
+        max-width: 900px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    /* Mobile Adjustments */
+    @media (max-width: 768px) {
+        .about-container {
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        .skill, .education, .project {
+            width: 100%;
+            padding: 20px;
+        }
+
+        .skill h2 {
+            font-size: 16px;
+        }
+    }
+</style>
+
+<body>
+    <div class="intro">
+        <h1 class="name">
+            <marquee scrollamount="10">Hi, I'm Nandha kumar B</marquee>
+        </h1>
+        <h2>Full Stack Web Developer</h2>
+    </div>
+
+    <div class="about-container">
+        <!-- Technical Skills -->
+        <div class="skill">
+            <img src="skill.png" height="40" width="40" class="skillimg" alt="skills">
+            <h1>Technical Skills</h1>
+            <h2>Front-End: <span>HTML, CSS, JavaScript</span></h2>
+            <h2>Frameworks: <span>React js</span></h2>
+            <h2>Languages: <span>Java</span></h2>
+            <h2>Database: <span>MySQL</span></h2>
+        </div>
+
+        <!-- Education -->
+        <div class="education">
+            <img src="mortarboard.png" width="40" height="40" class="eduimg" alt="edu">
+            <h1>Education</h1>
+            <h2>Bachelor of Computer Applications</h2>
+            <p>Thiruthangal Nadar College (2023 - 2026)</p>
+            <hr style="border: 0.5px solid #444; margin: 10px 0;">
+            <h2>Higher Secondary Certificate</h2>
+            <p>Pak Palanisamy Hr Sec School</p>
+        </div>
+    </div>
+
+    <!-- Projects Section -->
+    <div class="project-wrapper">
+        <div class="project">
+            <img src="project-management.png" height="40" width="40" class="projectimg" alt="projects">
+            <h1>Key Projects</h1>
+            
+            <h2>Food Wastage Management System</h2>
+            <p>
+                • Developed a web-based application to bridge the gap between food donors (Restaurants/Hotels) and NGOs.<br>
+                • Implemented MySQL database to manage user profiles, food listings, and donation tracking.<br>
+                • Managed backend logic with Java and Maven for a scalable project structure.
+            </p>
+
+            <h2>Trendy Chaps (E-Commerce)</h2>
+            <p>
+                • Designed and developed a responsive e-commerce storefront for apparel.<br>
+                • Focused on high-quality UI/UX and seamless navigation for a modern shopping experience.
+            </p>
+        </div>
+    </div>
+</body>
