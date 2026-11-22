@@ -67,7 +67,7 @@ function Home() {
                         </div>
                                 <div className="herobtncont">
                                     <button className="dbtn"><a href={Resume} download="Nandha_Kumar_B_Resume.pdf">⬇ Download CV</a></button>
-                                    <button className="cbtn ">📩 Let's Connect</button>
+                                    <button className="cbtn "><a href="#Contact">📩 Let's Connect</a></button>
                                 </div>
                         
 
