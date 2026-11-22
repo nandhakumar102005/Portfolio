@@ -1,0 +1,903 @@
+*{
+    font-family: 'Times New Roman', Times, serif;
+   
+
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    overflow-x: hidden;
+    
+}
+
+
+#brandname{
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.nav-item{
+    padding: 0px 15px;
+    
+
+}
+.nav-link{
+    position: relative;
+    font-weight: 400;
+    color: black;
+    
+
+}
+
+.nav-link::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 6px;
+    width: 100%;
+    height: 3px;
+    background:black;
+    border-radius: 10px;
+    transform: scale(0);
+    transition: transform .5s;
+}
+
+.nav-link:hover::after{
+transform: scale(1);
+}
+.navbar{
+    display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed !important;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  background: linear-gradient(transparent white);
+  backdrop-filter: blur(15px);
+  
+   box-shadow: 0px 4px 10px rgba(0,0,0,0.1);
+} 
+
+.hithere{
+    margin-top: 150px;
+    font-size: 1.3rem;
+    color: silver;
+    font-weight: 500;
+}
+.name{
+    font-size: 4.5rem;
+    font-weight: bold;
+}
+
+
+
+
+
+.wrapper {
+  font-family: sans-serif;
+  font-size: 24px;
+}
+
+.typed-words span {
+  display: inline-block;
+  animation: rotateWords 9s linear infinite;
+  opacity: 0;
+  position: absolute;
+  text-align: center;
+  font-size: 2rem;
+}
+
+
+.typed-words span:nth-child(1) {
+  animation-delay: 0s;
+}
+.typed-words span:nth-child(2) {
+  animation-delay: 3s;
+}
+.typed-words span:nth-child(3) {
+  animation-delay: 6s;
+}
+
+@keyframes rotateWords {
+  0% { opacity: 0; transform: translateY(20px); }
+  5% { opacity: 1; transform: translateY(0); }
+  30% { opacity: 1; transform: translateY(0); }
+  35% { opacity: 0; transform: translateY(-20px); }
+  100% { opacity: 0; transform: translateY(-20px); }
+}
+
+
+.homepdiv{
+    margin-top: 70px;
+    max-width: 50%;
+    justify-content: center;
+    align-items: center;
+}
+
+.homepdiv h6{
+word-spacing: 5px;
+font-size: 1.1rem;
+line-height: 30px;
+}
+
+.Homemaindiv{
+    padding: 0% 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hanging-wrapper {
+  position: relative;
+  display: inline-block;
+  padding-top: 28px;
+ top: 100px;
+  right: 50px;
+}
+
+.pin {
+  width: 10px;
+  height: 10px;
+  background: #444;
+  border-radius: 50%;
+  position: absolute;
+  top: 4px;
+  left: 50%;
+  transform: translateX(-50%);
+box-shadow: 0 12px 28px rgba(0, 0, 0, 0.18);
+  z-index: 3;
+
+}
+
+.string {
+  width: 2px;
+  height: 40px;
+  background: #999;
+  position: absolute;
+  top: 8px;
+  left: 50%;
+  transform: translateX(-50%);
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.18);
+  z-index: 2;
+}
+
+.hanging-card {
+  width: 300px;
+  height: 450px;
+  border-radius: 20px;
+  overflow: hidden;
+ box-shadow:
+    0 20px 60px rgba(0, 0, 0, 0.7),
+    0 0 0 2px rgba(255, 255, 255, 0.15),
+    0 0 0 5px rgba(255, 255, 255, 0.04),
+    inset 0 0 30px rgba(0, 0, 0, 0.3);
+  transform-origin: top center;
+  cursor: pointer;
+  will-change: transform;
+  margin-top: 20px;
+}
+
+.hanging-card img {
+  width: 100%;
+  
+  height: auto;
+  display: block;
+    transition: transform 0.5s ease;
+}
+
+.hanging-card img:hover{
+     filter: brightness(1.08);
+       transform: scale(1.03);
+}
+
+
+.hanging-card.is-swinging {
+  animation: continuousSwing 2.4s ease-in-out forwards;
+}
+
+@keyframes continuousSwing {
+  0% {
+    transform: rotate(0deg);
+  }
+  15% {
+    transform: rotate(-7.5deg);
+  }
+  35% {
+    transform: rotate(5.2deg);
+  }
+  55% {
+    transform: rotate(-3.4deg);
+  }
+  74% {
+    transform: rotate(2deg);
+  }
+  88% {
+    transform: rotate(-1deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+.dbtn{
+    padding: 7px 15px;
+    background-color: black;
+    color: white;
+    border-radius: 50px;
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.18);
+    font-weight: bold;
+    transition: transform;
+    transition-duration: 0.5s;
+    transition-timing-function: ease;
+}
+.dbtn a{
+    text-decoration: none;
+    color: inherit;
+
+    
+}
+.dbtn a:hover{
+    text-decoration: none;
+    color: inherit;
+}
+
+.dbtn:hover{
+  transform: translateY(-8px);
+   background-color: white;
+  color: black;
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.8);
+  
+}
+
+.cbtn{
+    padding: 7px 15px;
+    
+    background-color: white;
+    color: black;
+    border-radius: 50px;
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.18);
+    margin-left: 15px;
+     transition: transform;
+     transition-timing-function: ease;
+     transition-duration: 0.5s;
+    font-weight: bold;
+}
+.cbtn:hover{
+  transform: scale(1.05);
+  background-color: black;
+  color: white;
+   transform: translateY(-8px);
+ 
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.8);
+}
+
+
+.herobtncont{
+margin-top:20px ;
+display: flex;
+justify-content: start;
+align-items: center;
+}
+
+.cmaincont{
+   margin-top: 10px;
+
+   height: 100vh;
+   width: 100%;
+   
+}
+
+.getctext{
+    position: relative;
+    top: 100px;
+    left: 70px;
+    font-weight: 900;
+}
+
+.letsch1{
+    position: relative;
+    top: 130px;
+    left:70px;
+    font-size: 4rem;
+    font-weight: bold;
+
+}
+.letscp{
+    position: relative;
+    top: 140px;
+    left:70px;
+    max-width: 400px;
+    line-height: 30px;
+
+
+}
+
+.ccards{
+    
+    width: 160px;
+    border-radius: 50px;
+    background: transparent;
+     display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+    text-decoration: none;
+    color: black;
+    font-weight: 900;
+
+    
+}
+
+
+.ccards img{
+    height: 150px;
+    width: 150px;
+    object-fit: contain;
+     transition: transform;
+    transition-duration: 0.7s;
+    transition-timing-function: ease;
+    background: transparent;
+   
+
+}
+
+.ccards img:hover{
+ transform: translateY(-8px);
+}
+
+.ccards a{
+    text-decoration: none;
+    color:black;
+    font-weight:900 ;
+
+}
+.logop{
+    margin-top: 5px;
+}
+
+.clogocont{
+    margin-top: 200px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.col{
+     display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+    
+
+}
+
+.backtotop{
+    display: flex;
+    justify-content:end;
+    align-items: center;
+    margin-top: 40px;
+    margin-right: 30px;
+}
+
+.backtotop a{
+    text-decoration: none;
+    color: black;
+    opacity: 0.7;
+    
+}
+
+.rights{
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    margin-top: 50px;
+}
+
+.rights h6{
+    opacity: 0.7;
+}
+.photocont{
+    position: relative;
+    top: -25px;
+}
+
+
+
+
+
+
+
+
+
+.lanyard-clip {
+  width: 14px;
+  height: 45px;
+  background: #1a1a1a;
+  border-radius: 0 0 7px 7px;
+  position: relative;
+
+  margin: 0 auto -6px;
+  z-index: 3;
+}
+
+.lanyard-clip::after {
+  content: '';
+  width: 22px;
+  height: 10px;
+  background: #333;
+  border-radius: 4px;
+  position: absolute;
+  bottom: -4px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+
+.hanging-card {
+  width: 300px;
+  background: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  border-radius: 20px;
+  padding: 12px;
+  overflow: hidden;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.18);
+  transform-origin: top center;
+  cursor: pointer;
+  will-change: transform;
+  margin-top: 6px;
+}
+
+.badge-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  color: #666;
+  margin-bottom: 8px;
+}
+
+.badge-open {
+  color: #0f766e;
+}
+
+.badge-photo-box {
+  width: 100%;
+  height: 345px;
+  border-radius: 14px;
+  overflow: hidden;
+}
+
+.hanging-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
+  display: block;
+  transition: transform 0.5s ease;
+}
+
+.hanging-card img:hover {
+  filter: brightness(1.06);
+  transform: scale(1.03);
+}
+
+.badge-footer {
+  text-align: center;
+  padding-top: 10px;
+}
+
+.badge-name {
+  margin: 0 0 4px;
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #111;
+}
+
+.badge-role {
+  display: inline-block;
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  color: #444;
+  background: #f3f4f6;
+  padding: 4px 10px;
+  border-radius: 999px;
+}
+
+.fade-up {
+    animation: fadeUp linear both;
+    animation-timeline: view();
+    animation-range: entry 0% entry 20%;
+}
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+
+
+
+
+
+
+@media(max-width:1000px){
+    .name{
+        font-size: 3.1rem;
+    }
+    .cmaincont{
+   margin-top: 200px;
+  
+   height: 100vh;
+   width: 100%;
+
+}  
+  .name{
+        font-size: 3.1rem;
+    }
+     .hithere{
+        font-size: 1rem;
+        text-align: center;
+        padding: 0%;
+        
+    }
+    .name{
+        font-size: 2.2rem;
+        text-align: center;
+    }
+    .namecont{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        margin-top: -60px;
+    }
+
+    .wrapper span{
+         display: flex;
+        justify-content: center;
+         align-items: center;
+        text-align: center;
+        margin-top: 10px;
+        
+        
+    }
+
+    
+.typed-words span {
+    font-size: 1.1rem;
+    font-weight: 700;
+    text-align: center;
+}
+
+.homepdiv {
+    margin-top: 60px;
+    max-width: 100%;
+    
+
+}
+
+.homepdiv h6{
+word-spacing: 2px;
+font-size: 1.1rem;
+line-height: 30px;
+}
+
+.Homemaindiv{
+    padding: 0px 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column-reverse;
+}
+
+.hanging-wrapper {
+  position: relative;
+  display: inline-block;
+  padding-top: 28px;
+  top: 70px;
+  right: 0;
+}
+
+.ccards img{
+    height: 130px;
+    width: 130px;
+    object-fit: contain;
+     transition: transform;
+    transition-duration: 0.7s;
+    transition-timing-function: ease;
+    background: transparent;
+   
+
+}     
+
+
+
+
+}
+
+
+@media(max-width:900px){
+    .name{
+        font-size: 3.1rem;
+    }
+     .hithere{
+        font-size: 1rem;
+        text-align: center;
+        padding: 0%;
+        
+    }
+    .name{
+        font-size: 2.2rem;
+        text-align: center;
+    }
+    .namecont{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        margin-top: -60px;
+    }
+
+    .wrapper span{
+         display: flex;
+        justify-content: center;
+         align-items: center;
+        text-align: center;
+        margin-top: 10px;
+        
+        
+    }
+
+    
+.typed-words span {
+    font-size: 1.1rem;
+    font-weight: 700;
+    text-align: center;
+}
+
+.homepdiv {
+    margin-top: 60px;
+    max-width: 100%;
+    
+
+}
+
+.homepdiv h6{
+word-spacing: 2px;
+font-size: 1.1rem;
+line-height: 30px;
+}
+
+.Homemaindiv{
+    padding: 0px 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column-reverse;
+}
+
+.hanging-wrapper {
+  position: relative;
+  display: inline-block;
+  padding-top: 28px;
+  top: 70px;
+  right: 0;
+}
+
+.ccards img{
+    height: 130px;
+    width: 130px;
+    object-fit: contain;
+     transition: transform;
+    transition-duration: 0.7s;
+    transition-timing-function: ease;
+    background: transparent;
+   
+
+}
+    
+
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media(max-width:768px){
+    .hithere{
+        font-size: 1rem;
+        text-align: center;
+        padding: 0%;
+        
+    }
+    .name{
+        font-size: 2.2rem;
+        text-align: center;
+    }
+    .namecont{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        margin-top: -70px;
+    }
+
+    .wrapper span{
+         display: flex;
+        justify-content: center;
+         align-items: center;
+        text-align: center;
+        margin-top: 10px;
+        
+        
+    }
+
+    
+.typed-words span {
+    font-size: 1.1rem;
+    font-weight: 700;
+    text-align: center;
+}
+
+.homepdiv{
+    margin-top: 60px;
+    max-width:100%;
+    
+}
+
+.homepdiv h6{
+word-spacing: 2px;
+font-size: 1rem;
+line-height: 30px;
+}
+
+.Homemaindiv{
+    padding: 0px 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column-reverse;
+}
+
+.hanging-wrapper {
+  position: relative;
+  display: inline-block;
+  padding-top: 28px;
+  top: 70px;
+  right: 0;
+}
+
+.herobtncont{
+margin-top:20px ;
+display: flex;
+justify-content: start;
+align-items: center;
+flex-direction: column;
+}
+
+.dbtn{
+  
+    margin-top: 10px;
+}
+.cbtn{
+
+    margin-top: 15px;
+     margin-left: 0px;
+}
+
+.getctext{
+    position: relative;
+    top: 20px;
+    left: 5px;
+    font-weight: 900;
+}
+.letsch1{
+    position: relative;
+    top: 70px;
+    left:5px;
+    font-size: 2.5rem;
+    font-weight: bold;
+
+    
+}
+
+.letscp{
+     position: relative;
+    top: 70px;
+    left:5px;
+    max-width: 400px;
+    line-height: 30px;
+
+
+}
+.clogocont{
+    margin-top: 100px;
+}
+
+.ccards{
+    height: 100px;
+    width: 100px;
+}
+.ccards img{
+    height: 100px;
+    width: 100px;
+
+}
+.logop{
+    font-size: 0.7rem;
+}
+.backtotop{
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    margin-top: 40px;
+    margin-right: 0px;
+    
+}
+
+.backtotop a{
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    
+}
+
+.backtotop h5{
+    font-size: 1rem;
+}
+.rights h6{
+
+    font-size: 0.7rem;
+    opacity: 2.5px;
+    margin-bottom: 10px;
+}
+
+
+
+
+.hanging-card {
+    width: 300px;
+  }
+
+  .badge-photo-box {
+    height: 340px;
+  }
+
+  .photocont{
+    position: relative;
+    top: -15px;
+}
+
+
+
+}
+
+
+
+

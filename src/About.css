@@ -1,0 +1,230 @@
+
+.about-section {
+  width: 100%;
+  min-height: 100vh;
+  background: var(--bg-primary, #f7f7f7);
+  color: var(--text-primary, #111111);
+  padding: 5.5rem 0;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  margin-top: 100px;
+}
+
+.about-container {
+  width: 100%;
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.about-top-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  padding-bottom: 1.5rem;
+  margin-bottom: 2.75rem;
+  border-bottom: 1px solid rgba(17, 17, 17, 0.1);
+}
+
+.about-overline {
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: #6b7280;
+  margin: 0;
+}
+
+.about-status-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  color: #0f766e;
+  background: #ffffff;
+  border: 1px solid rgba(17, 17, 17, 0.1);
+  padding: 0.42rem 0.9rem;
+  border-radius: 999px;
+}
+
+.about-status-pill::before {
+  content: '';
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #10b981;
+}
+
+
+.about-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.05fr) minmax(0, 1fr);
+  gap: 4rem;
+  align-items: start;
+}
+
+.about-left,
+.about-right {
+  min-width: 0;
+}
+
+.about-headline {
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: clamp(2.6rem, 5vw, 4.35rem);
+  line-height: 1.06;
+  font-weight: 500;
+  color: #111111;
+  margin: 0 0 2.25rem;
+}
+
+.about-headline-line {
+  display: block;
+}
+
+.about-headline-line:last-child {
+  font-style: italic;
+}
+
+.about-stats {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.25rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid rgba(17, 17, 17, 0.1);
+}
+
+.about-stat-value {
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: clamp(1.15rem, 1.8vw, 1.5rem);
+  font-weight: 600;
+  color: #111111;
+  line-height: 1.25;
+  margin-bottom: 0.3rem;
+}
+
+.about-stat-label {
+  font-size: 0.8rem;
+  color: #6b7280;
+  line-height: 1.4;
+}
+
+
+.about-bio-group {
+  display: flex;
+  flex-direction: column;
+  gap: 1.15rem;
+  margin-bottom: 2rem;
+}
+
+.about-bio {
+  font-size: 1rem;
+  line-height: 1.8;
+  color: #374151;
+  margin: 0;
+}
+
+.about-highlights {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+.about-highlight-card {
+  background: #ffffff;
+  border: 1px solid rgba(17, 17, 17, 0.08);
+  border-radius: 14px;
+  padding: 1.15rem 1.35rem;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.03);
+  transition: transform 0.3s cubic-bezier(0.22, 1, 0.36, 1),
+    box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.about-highlight-card::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 3.5px;
+  background: #111111;
+  transform: scaleY(0.35);
+  transform-origin: center;
+  transition: transform 0.3s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.about-highlight-card:hover {
+  transform: translateX(6px);
+  border-color: rgba(17, 17, 17, 0.22);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.06);
+}
+
+.about-highlight-card:hover::before {
+  transform: scaleY(1);
+}
+
+.highlight-label {
+  display: block;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #6b7280;
+  margin-bottom: 0.3rem;
+}
+
+.highlight-primary {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #111111;
+  margin: 0 0 0.2rem;
+}
+
+.highlight-secondary {
+  font-size: 0.86rem;
+  color: #4b5563;
+  margin: 0;
+}
+
+@media (max-width: 960px) {
+  .about-section {
+    min-height: auto;
+    padding: 4rem 0;
+  }
+
+  .about-grid {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+}
+
+
+@media (max-width: 600px) {
+  .about-container {
+    padding: 0 1.15rem;
+  }
+
+  .about-top-row {
+    margin-bottom: 2rem;
+  }
+
+  .about-stats {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .about-bio {
+    font-size: 0.94rem;
+    line-height: 1.72;
+  }
+
+  .about-highlight-card {
+    padding: 1rem 1.15rem;
+  }
+}

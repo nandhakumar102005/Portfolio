@@ -1,0 +1,258 @@
+.projectmaincont{
+    margin-top: 50px;
+    
+  
+}
+a{
+    text-decoration: none;
+}
+.projectrow.col{
+    min-width: 0;
+}
+
+.pcards{
+    max-width: 100%;
+    width: 100%;
+    
+    border-radius: 20px;
+    transition:  transform 0.5s ease;
+    margin: 20px 0 0 0; 
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin-bottom: 10px;
+
+
+}
+.pcardimg-box {
+  width: 100%;
+  overflow: hidden;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.pcards:hover{
+    transform: translatey(-10px);
+    /* box-shadow: 0 14px 30px rgba(0, 0, 0, 0.30); */
+    box-shadow:
+    0 20px 60px rgba(0, 0, 0, 0.7),
+    0 0 0 2px rgba(255, 255, 255, 0.15),
+    0 0 0 5px rgba(255, 255, 255, 0.04),
+    inset 0 0 30px rgba(0, 0, 0, 0.3);
+
+
+}
+.pcards:focus,.pcards:focus-visible,.pcards *:focus{
+    outline: none;
+    box-shadow: none;
+}
+
+
+.pcardimg{
+    width: 100%;
+    transition: transform;
+    transition-duration: 0.7s;
+    transition-timing-function: ease;
+    object-fit: contain;
+    
+
+    
+}
+.pcardimg:hover{
+    transform: scale(1.02);
+    filter: brightness(1.08);
+    
+
+}
+.projecttitle{
+        font-weight: bold;
+    }
+.projectp{
+    opacity: 0.7;
+    font-weight: 900
+}
+.projectdis{
+    font-weight: 400;
+
+}
+.techdiv{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    
+
+}
+
+.techitems{
+    margin:3px 7px;
+    border: 1px solid rgb(180, 180, 180);
+    padding: 3px 7px;
+    transition: transform 0.7s ease;
+    
+}
+.techitems:hover{
+    background-color: black;
+    color: white;
+    transform: translateY(-5px);
+
+}
+
+.pbtncont{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+
+}
+
+
+.livelink{
+    width: 40%;
+    font-weight: bold;
+    transition: transform 0.5s ease;
+    
+
+}
+.livelink a{
+    color: white;
+}
+.livelink:hover{
+  transform: translateY(-5px);
+}
+
+
+.source {
+width: 40%;
+border: 1px solid;
+border-color: gray;
+margin-left: 10px;
+color: black;
+font-weight: bold;
+transition: transform 0.5s ease;
+
+}
+.source a{
+    color: black;
+}
+.source:hover{
+  transform: translateY(-5px);
+  border: 1px solid black;
+}
+
+.myworkh6{
+    font-weight: 400;
+}
+
+.featuredproject{
+    border-bottom: 5px double black;
+    display: inline;
+    font-weight: bold;
+    font-size: 3rem;
+}
+.projectpara{
+    margin-top: 20px;
+    font-weight: 400;
+    font-size: 1.1rem;
+}
+.projectcol{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.projectend{
+    text-align: center;
+    margin-top: 100px;
+
+}
+.projectendbtn{
+    background-color: white;
+    color: black;
+    padding: 4px 10px;
+    transition: transform;
+    transition-duration: 0.5s;
+    transition-timing-function: ease;
+    margin-top: 10px;
+}
+
+.projectendbtn a{
+    color: inherit;
+}
+.projectendbtn a:hover{
+    color: inherit;
+}
+
+.projectendbtn:hover{
+    transform: translateY(-7px);
+    background-color: black;
+    color: white;
+}
+
+
+
+
+
+
+
+
+
+
+
+@media(max-width:768px){
+    .projecttitle{
+        font-size: 1.1rem;
+        font-weight: bold;
+    }
+    .projectdis{
+    font-weight: 400;
+    font-size: 0.8rem;
+    line-height: 23px;
+    word-spacing: 1px;
+
+}
+.pcards{
+    max-width: 100%;
+    width: 100%;
+
+}
+
+.livelink{
+    width: 50%;
+    font-weight: bold;
+    
+}
+
+.source{
+width: 50%;
+border: 1px solid;
+border-color: gray;
+margin-left: 10px;
+color: black;
+font-weight: bold;
+
+
+}
+.myworkh6{
+    font-size: 1rem;
+}
+
+.featuredproject{
+    border-bottom: 5px double black;
+    display: inline;
+    font-weight: 700;
+    font-size: 2rem;
+}
+.projectpara{
+    margin-top: 30px;
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 20px;
+    word-spacing: 3px;
+}
+.projectend h5{
+    font-size: 1rem;
+    
+}
+
+
+
+
+}
