@@ -264,15 +264,6 @@ box-shadow: 0 12px 28px rgba(0, 0, 0, 0.18);
      transition-duration: 0.5s;
     font-weight: bold;
 }
-.cbtn a{
-     text-decoration: none;
-    color: inherit;
-}
-.cbtn a:hover{
-     text-decoration: none;
-    color: inherit;
-}
-
 .cbtn:hover{
   transform: scale(1.05);
   background-color: black;
@@ -402,10 +393,12 @@ align-items: center;
     justify-content: center;
     align-items:center;
     margin-top: 50px;
+    
 }
 
 .rights h6{
     opacity: 0.7;
+    margin-bottom: 30px;
 }
 .photocont{
     position: relative;
@@ -444,7 +437,8 @@ align-items: center;
 }
 
 
-.hanging-card {
+
+/* .hanging-card {
   width: 300px;
   background: #ffffff;
   border: 1px solid rgba(0, 0, 0, 0.12);
@@ -455,7 +449,25 @@ align-items: center;
   transform-origin: top center;
   cursor: pointer;
   will-change: transform;
-  margin-top: 6px;
+  margin-top: -2px;
+} */
+ .hanging-card {
+  position: relative;
+  width: 300px;
+  height: auto;
+  background: linear-gradient(160deg, #ffffff 0%, #f1f3f6 100%);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 20px;
+  padding: 36px 12px 16px;
+  overflow: visible;
+  box-shadow:
+    0 30px 50px -15px rgba(0, 0, 0, 0.35),
+    0 8px 18px rgba(0, 0, 0, 0.12),
+    inset 0 1px 0 rgba(255, 255, 255, 0.9);
+  transform-origin: 50% -55px;
+  cursor: pointer;
+  will-change: transform;
+  margin-top: 40px;
 }
 
 .badge-header {
@@ -466,18 +478,27 @@ align-items: center;
   font-weight: 700;
   letter-spacing: 0.08em;
   color: #666;
-  margin-bottom: 8px;
+  margin-bottom: 5px;
 }
 
 .badge-open {
-  color: #0f766e;
+  color: black;
 }
 
-.badge-photo-box {
+/* .badge-photo-box {
   width: 100%;
   height: 345px;
   border-radius: 14px;
   overflow: hidden;
+} */
+
+.badge-photo-box {
+  position: relative;
+  width: 100%;
+  height: 330px;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.08);
 }
 
 .hanging-card img {
@@ -496,7 +517,8 @@ align-items: center;
 
 .badge-footer {
   text-align: center;
-  padding-top: 10px;
+  padding-top: 5px;
+  margin-bottom: -7px;
 }
 
 .badge-name {
@@ -513,9 +535,67 @@ align-items: center;
   letter-spacing: 0.08em;
   color: #444;
   background: #f3f4f6;
-  padding: 4px 10px;
+  padding: 2px 10px;
   border-radius: 999px;
 }
+
+
+
+
+
+
+/* lanyard strap */
+.card-strap {
+  position: absolute;
+  left: 50%;
+  top: -55px;
+  width: 22px;
+  height: 50px;
+  transform: translateX(-50%);
+  background: linear-gradient(90deg, #0f172a, #1e293b 50%, #0f172a);
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.06);
+  z-index: 1;
+}
+
+/* metal clip */
+.card-clip {
+  position: absolute;
+  left: 50%;
+  top: -6px;
+  width: 26px;
+  height: 26px;
+  transform: translateX(-50%);
+  border-radius: 5px 5px 10px 10px;
+  background: linear-gradient(180deg, #f3f4f6, #9ca3af 55%, #e5e7eb);
+  border: 1px solid #6b7280;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.35);
+  z-index: 4;
+}
+
+/* punched slot */
+.card-slot {
+  position: absolute;
+  left: 50%;
+  top: 14px;
+  width: 60px;
+  height: 7px;
+  transform: translateX(-50%);
+  border-radius: 10px;
+  background: #e5e7eb;
+  box-shadow: inset 0 2px 3px rgba(0, 0, 0, 0.35);
+  z-index: 2;
+}
+
+.rights{
+
+}
+
+
+
+
+
+
+
 
 .fade-up {
     animation: fadeUp linear both;
@@ -713,28 +793,11 @@ line-height: 30px;
      transition: transform;
     transition-duration: 0.7s;
     transition-timing-function: ease;
-    background: transparent;
-   
-
+    background: transparent; 
 }
+
     
-
-
-
-
 }
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
