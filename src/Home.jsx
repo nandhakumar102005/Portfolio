@@ -21,9 +21,9 @@ function Home() {
     }
     return (
         <>
-              <Navbar />
+            <Navbar />
             <div className="container-xxl fade-up" id="Home">
-              
+
 
                 <div className="container-xxl Homemaindiv" >
                     <div className="namecont">
@@ -65,33 +65,19 @@ function Home() {
                                 creating clean and smooth user-centric digital solutions.
                             </h6>
                         </div>
-                                <div className="herobtncont">
-                                    <button className="dbtn"><a href={Resume} download="Nandha_Kumar_B_Resume.pdf">⬇ Download CV</a></button>
-                                    <button className="cbtn "><a href="#Contact">📩 Let's Connect</a></button>
-                                </div>
-                        
+                        <div className="herobtncont">
+                            <button className="dbtn"><a href={Resume} download="Nandha_Kumar_B_Resume.pdf">⬇ Download CV</a></button>
+                            <button className="cbtn ">📩 Let's Connect</button>
+                        </div>
+
 
                     </div>
 
+                   
                     {/* <div className="photocont">
                         <div className="hanging-wrapper">
-                             <div className="string" />
-                            <div className="pin" />
-                           
-                            <div
-                                className={`hanging-card ${swinging ? "is-swinging" : ""}`}
-                                onClick={handleclick}
-                                onAnimationEnd={() => setSwinging(false)}
-                            >
-                                <img src={profile} alt="Profile Photo" />
-                                
-                            </div>
-                            <p className="text-center" style={{opacity:"0.5", marginTop:"5px"}}>👆Tap to Swing</p>
-                        </div>
-                    </div> */}
-                    <div className="photocont">
-                        <div className="hanging-wrapper">
                             <div className="lanyard-clip" />
+                            
 
                             <div
                                 className={`hanging-card ${swinging ? "is-swinging" : ""}`}
@@ -100,7 +86,7 @@ function Home() {
                             >
                                 <div className="badge-header">
                                     <span>PORTFOLIO • 2026</span>
-                                    <span className="badge-open">● OPEN</span>
+                                    <span className="badge-open">● CHENNAI</span>
                                 </div>
 
                                 <div className="badge-photo-box">
@@ -109,12 +95,47 @@ function Home() {
 
                                 <div className="badge-footer">
                                     <h4 className="badge-name">Nandha Kumar B</h4>
-                                    <span className="badge-role">FRONTEND & REACT DEV</span>
+                                    <span className="badge-role">REACT & WEB DEVELOPER</span>
                                 </div>
                             </div>
                             <p className="text-center" style={{ opacity: "0.5", marginTop: "5px" }}>👆Tap to Swing</p>
                         </div>
-                    </div>
+
+                        
+                    </div> */}
+                    <div className="photocont">
+    <div className="hanging-wrapper">
+        <div
+            className={`hanging-card ${swinging ? "is-swinging" : ""}`}
+            onClick={handleclick}
+            onAnimationEnd={() => setSwinging(false)}
+        >
+            {/* lanyard + clip + slot */}
+            <div className="card-strap" />
+            <div className="card-clip" />
+            <div className="card-slot" />
+
+            <div className="badge-header">
+                <span>PORTFOLIO • 2026</span>
+                <span className="badge-open">● CHENNAI</span>
+            </div>
+
+            <div className="badge-photo-box">
+                <img src={profile} alt="Nandha Kumar B" />
+                <div className="badge-shine" />
+            </div>
+
+            <div className="badge-footer">
+                <h4 className="badge-name">Nandha Kumar B</h4>
+                <span className="badge-role">REACT & WEB DEVELOPER</span>
+
+                
+              
+            </div>
+        </div>
+        <p className="text-center" style={{ opacity: "0.5", marginTop: "5px" }}>👆Tap to Swing</p>
+    </div>
+</div>
 
 
 
@@ -124,11 +145,11 @@ function Home() {
             </div>
 
 
-            <Skills/>
-            <Project/>
-            <About/>
-            <Contact/>  
-          
+            <Skills />
+            <Project />
+            <About />
+            <Contact />
+
 
 
 
